@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+    <title>XCKD Mobile</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600&family=Josefin+Sans:wght@600&display=swap" rel="stylesheet">
+    <style>
+        .title {
+            font-family: 'Heebo', sans-serif;
+            margin-bottom: 0px;    
+            text-align: center;
+            margin-top: 5px;
+        }
+        .alt {
+            font-family: 'Heebo', sans-serif;
+            margin-top: 0px; 
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .comic {
+            display: block;
+            max-width:100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .button {
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 5px;
+            border-style: solid;
+            color: black;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 0px;
+            transition-duration: 0.4s;
+            /*padding-left: clamp(2%, 10%, 20%);*/
+            /*padding-right: clamp(2%, 10%, 20%);*/
+            padding-inline: 10%;
+        }
+        .button:hover {
+            background-color: black;
+            color: white;
+        }
+        .container {
+            text-align: center;
+            margin-top: 10px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body onload="resize()">
+    <script>
+        function resize() {
+            var one = document.getElementById("comic");
+            var two = document.getElementById("container");
+            wdt = one.clientWidth
+            two.style.width = `${wdt}px`;
+
+        }
+    </script>
+    <h1 class="title">Comic Title</h1>
+    <h2 class="alt">TEst</h2>
+    <img class="comic" id="comic" src="https://imgs.xkcd.com/comics/barrel_cropped_(1).jpg" title='"I have nothing to offer but blood--next slide, please--toil--next slide, please--tears, and--next slide, please--sweat."'>
+    <div class="container" id="container">
+        <button class="button" type="button"><<</button>
+        <button class="button" type="button"><</button>
+        <button class="button" type="button">?</button>
+        <button class="button" type="button">></button>
+        <button class="button" type="button">>></button>
+    </div>
+</body>
