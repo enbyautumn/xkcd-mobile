@@ -35,9 +35,8 @@
             font-size: 16px;
             margin: 4px 0px;
             transition-duration: 0.4s;
-            /*padding-left: clamp(2%, 10%, 20%);*/
-            /*padding-right: clamp(2%, 10%, 20%);*/
-            padding-inline: 10%;
+            padding-left: clamp(2%, 10%, 20%);
+            padding-right: clamp(2%, 10%, 20%);
         }
         .button:hover {
             background-color: black;
@@ -61,6 +60,12 @@
             var two = document.getElementById("container");
             wdt = one.clientWidth
             two.style.width = `${wdt}px`;
+            els = document.getElementsByClassName("button")
+            Array.from(els).forEach((el) => {
+                // Do stuff here
+                el.style.width = `${wdt * .2}px`
+            });
+
 
         }
     </script>
